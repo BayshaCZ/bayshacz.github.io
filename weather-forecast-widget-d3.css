@@ -126,9 +126,8 @@
         .forecastwidget .location .value {
             font-size: 1em;
             font-weight: bold;
-            cursor: pointer;
-
         }
+        /*
         .forecastwidget .location .editor {
             display:none;
             position: absolute;
@@ -142,7 +141,7 @@
         }
         .forecastwidget .location.edit .editor {
             display:block;
-        }
+        }*/
         
         .forecastwidget .footer {
             font-size: 0.8em;

@@ -29,13 +29,13 @@ var WeatherForecastDisplay=(function() {
         var me=this;
 
         //setLocation - updates the location and triggers a data reload
-        this.setLocation=function(location) {
+/*        this.setLocation=function(location) {
             if (!location) location="_auto_";
             me.config.location=location;
             me.dailydata=null;
             me.hourlydata=null;
             me.loadForecastData();
-        }
+        }*/
 
         //constructs Weather API request and then loads the weather forecast data from the Weather API
         this.loadForecastData=function() {
@@ -151,7 +151,7 @@ var WeatherForecastDisplay=(function() {
             //create the main widget structure if not present
             if (root.select(".location").empty()) {
 
-                root.html("<div class='location'><span class='value'>-</span><input type='text' class='editor' value=''></input>"+
+                root.html("<div class='location'><span class='value'>-</span>"+
                                 "<div class='viewchooser day' title='View by day'>Daily</div>"+
                                 "<div class='viewchooser hour' title='View by hour'>Hourly</div>"+
                             "</div>"+
@@ -191,7 +191,7 @@ var WeatherForecastDisplay=(function() {
             //location displays the current location and allows user to click to change it via a simple text box
             var locationRoot=root.select(".location")
             locationRoot.select(".value").html(me.config.location);
-            var locationEditor=locationRoot.select(".editor");
+           /* var locationEditor=locationRoot.select(".editor");
             locationEditor.attr("value",me.config.location)
             locationEditor.on("keypress", function() {
                 if(d3.event.keyCode === 13){
@@ -205,7 +205,7 @@ var WeatherForecastDisplay=(function() {
                 if (d3.event.target===locationEditor.node()) return;
                 locationRoot.classed("edit", !locationRoot.classed("edit"));
                 d3.event.stopPropagation(); 
-            });       
+            });       */
             
             d3.select("body").on("click",function(){
                 var outside = locationEditor.filter(function(d) {return this == d3.event.target}).empty();
