@@ -15,11 +15,11 @@
             width:40px;
              
         }
-        .forecastwidget .icon.sunny {background-image:url(images/sun.png);}
-        .forecastwidget .icon.partsunny {background-image:url(images/partsun.png);}
-        .forecastwidget .icon.cloudy {background-image:url(images/cloudy.png);}
-        .forecastwidget .icon.rain {background-image:url(images/rain.png);}
-        .forecastwidget .icon.snow {background-image:url(images/snow.png);}
+        .forecastwidget .icon.sunny {background-image:url(images/sun.png); background-repeat: no-repeat}
+        .forecastwidget .icon.partsunny {background-image:url(images/partsun.png); background-repeat: no-repeat}
+        .forecastwidget .icon.cloudy {background-image:url(images/cloudy.png); background-repeat: no-repeat}
+        .forecastwidget .icon.rain {background-image:url(images/rain.png); background-repeat: no-repeat}
+        .forecastwidget .icon.snow {background-image:url(images/snow.png); background-repeat: no-repeat}
 
         .forecastwidget .noselect {
             -webkit-user-select: none; /* Safari */
@@ -101,7 +101,7 @@
         .forecastwidget .days.vertical .day {
             grid-template-columns: 50px 30px 30px 30px 60px auto;
             grid-gap: 4px;
-            justify-content: start;
+            justify-content: center;
             margin: 2px 0px;
             padding: 4px 0px;
         }
