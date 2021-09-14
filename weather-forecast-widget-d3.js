@@ -273,22 +273,24 @@ var WeatherForecastDisplay=(function() {
                     "sunny":false,
                     "partsunny":false,
                     "cloudy":false,
-                    "wind":false,
+                    "showers":false,
                     "rain":false,
                     "snow":false,
 
                 }
                 if (d) {
-                    if (+d.precip>0.1 || +d.pop>40) {
-                        icons["rain"]=true;
-                    } else if (+d.wspd>40) {
-                        icons["wind"]=true;
-                    } else if  (+d.cloudcover>75) {
-                        icons["cloudy"]=true;
-                    }  else if  (+d.cloudcover>30) {
-                        icons["partsunny"]=true;
-                    } else {
+                    if (+d.conditions.includes("Clear")) {
                         icons["sunny"]=true;
+                    } else if (+d.conditions.includes("Snow")) {
+                        icons["snow"]=true;
+                    } else if  (+d.conditions.includes("Partially") || +d.conditions.includes("Decreasing")) {
+                        icons["partsunny"]=true;
+                    }  else if  (+d.conditions.includes("Showers")) {
+                        icons["showers"]=true;
+                    }  else if  (+d.conditions.includes("Rain") || +d.conditions.includes("Drizzle") || +d.conditions.includes("Thunderstorm"))  {
+                        icons["rain"]=true;
+                    } else {
+                        icons["cloudy"]=true;
                     }
                 }
 

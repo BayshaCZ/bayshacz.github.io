@@ -18,8 +18,10 @@
         .forecastwidget .icon.sunny {background-image:url(images/sun.png); background-repeat: no-repeat}
         .forecastwidget .icon.partsunny {background-image:url(images/partsun.png); background-repeat: no-repeat}
         .forecastwidget .icon.cloudy {background-image:url(images/cloudy.png); background-repeat: no-repeat}
+        .forecastwidget .icon.showers {background-image:url(images/partsunrain.png); background-repeat: no-repeat}
         .forecastwidget .icon.rain {background-image:url(images/rain.png); background-repeat: no-repeat}
         .forecastwidget .icon.snow {background-image:url(images/snow.png); background-repeat: no-repeat}
+
 
         .forecastwidget .noselect {
             -webkit-user-select: none; /* Safari */
