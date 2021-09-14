@@ -152,8 +152,8 @@ var WeatherForecastDisplay=(function() {
             if (root.select(".location").empty()) {
 
                 root.html("<div class='location'><span class='value'>-</span>"+
-                                "<div class='viewchooser day' title='View by day'>Daily</div>"+
-                                "<div class='viewchooser hour' title='View by hour'>Hourly</div>"+
+                                // "<div class='viewchooser day' title='View by day'>Daily</div>"+
+                                // "<div class='viewchooser hour' title='View by hour'>Hourly</div>"+
                             "</div>"+
                             "<div class='days noselect'>"+
                             "</div>"+
